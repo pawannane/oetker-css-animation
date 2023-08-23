@@ -1,0 +1,830 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 630px;
+  width: 26%;
+  margin: 0 auto;
+}
+
+/*=================================
+  main styling starts here
+=================================*/
+.animation-section {
+  margin: 20px 0;
+}
+
+.animation-container {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+  -ms-transform: translate(-50%, 20%);
+  transform: translate(-50%, 20%);
+}
+
+.table,
+.plate {
+  position: absolute;
+  bottom: 0;
+}
+
+.table {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: active-table 90s cubic-bezier(0, 1.58, 0.67, 1.59) 1ms
+    infinite;
+  animation: active-table 90s cubic-bezier(0, 1.58, 0.67, 1.59) 1ms infinite;
+}
+
+.plate {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-animation: active-plate 10s cubic-bezier(0.22, 0.68, 0, 1) 1.5s 1;
+  animation: active-plate 10s cubic-bezier(0.22, 0.68, 0, 1) 1.5s 1;
+}
+
+.info {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: #c2314a;
+  font-size: 30px;
+  text-align: center;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+.person-img {
+  position: absolute;
+  right: 0;
+  bottom: 85px;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.boring-info {
+  -webkit-animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 4s 1 alternate;
+  animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 4s 1 alternate;
+}
+
+.sad-sonali {
+  bottom: 90px;
+  -webkit-animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 4s 1 alternate;
+  animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 4s 1 alternate;
+}
+
+.bread-plate,
+.veggies,
+.bread {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  transform: translateX(-150%);
+}
+
+.veggies {
+  bottom: 20px;
+  left: 12%;
+}
+
+.bread-plate,
+.veggies {
+  -webkit-animation: sandwich 25s cubic-bezier(0.1, 1, 0, 1) 8s 1 alternate;
+  animation: sandwich 25s cubic-bezier(0.1, 1, 0, 1) 8s 1 alternate;
+}
+
+.bread {
+  z-index: 1;
+  bottom: 35px;
+  left: 12%;
+  -webkit-animation: breadUp 25s cubic-bezier(0.1, 1, 0, 1) 8s 1 alternate;
+  animation: breadUp 25s cubic-bezier(0.1, 1, 0, 1) 8s 1 alternate;
+}
+
+.knife {
+  position: absolute;
+  bottom: 50px;
+  left: 15%;
+  opacity: 0;
+  -webkit-transform: translateX(0) rotate(300deg);
+  -ms-transform: translateX(0) rotate(300deg);
+  transform: translateX(0) rotate(300deg);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-animation: moveKnife 5s cubic-bezier(0.22, 0.68, 0, 1) 15s 1 alternate;
+  animation: moveKnife 5s cubic-bezier(0.22, 0.68, 0, 1) 15s 1 alternate;
+}
+
+.mayo {
+  position: absolute;
+  bottom: 30px;
+  left: 15%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  -webkit-animation: showMayo 15s cubic-bezier(0.22, 0.68, 0, 1) 15s 1 alternate;
+  animation: showMayo 15s cubic-bezier(0.22, 0.68, 0, 1) 15s 1 alternate;
+}
+
+.sandwich-info {
+  -webkit-animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 21s 1 alternate;
+  animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 21s 1 alternate;
+}
+.happy-sonali {
+  -webkit-animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 21s 1 alternate;
+  animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 21s 1 alternate;
+}
+.chef {
+  bottom: 103px;
+}
+.product-info {
+  -webkit-animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 24s 1 alternate;
+  animation: boring-info 5s cubic-bezier(0, 1.17, 1, 1) 24s 1 alternate;
+}
+.chef {
+  -webkit-animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 24s 1 alternate;
+  animation: sad-sonali 5s cubic-bezier(0, 1.17, 1, 1) 24s 1 alternate;
+}
+
+.veg-mayo {
+  bottom: 0;
+  -webkit-animation: showVegMayo 5s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+  animation: showVegMayo 5s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+}
+
+.hat {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-250%, 0);
+  -ms-transform: translate(-250%, 0);
+  transform: translate(-250%, 0);
+  -webkit-animation: showHat 20s cubic-bezier(0, 1.17, 1, 1) 29s 1 forwards;
+  animation: showHat 20s cubic-bezier(0, 1.17, 1, 1) 29s 1 forwards;
+}
+
+.food-info {
+  -webkit-animation: food-info 15s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+  animation: food-info 15s cubic-bezier(0, 1.17, 1, 1) 27s 1 forwards;
+}
+
+.recipe-btn {
+  padding: 10px 6%;
+  border-radius: 6px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  background-color: #3f318b;
+  color: #fff;
+  text-transform: capitalize;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  white-space: nowrap;
+  -webkit-animation: showBtn 5s cubic-bezier(0, 1.17, 1, 1) 35s 1 forwards;
+  animation: showBtn 5s cubic-bezier(0, 1.17, 1, 1) 35s 1 forwards;
+}
+
+/* ****************************** 
+  animation starts here
+/* ****************************** */
+@-webkit-keyframes active-table {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes active-table {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes active-plate {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes active-plate {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes sad-sonali {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sad-sonali {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes boring-info {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes boring-info {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes sandwich {
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  25% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes sandwich {
+  0% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  25% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+}
+
+@-webkit-keyframes breadUp {
+  0% {
+    bottom: 35px;
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  25% {
+    bottom: 35px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    bottom: 80px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    bottom: 35px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 35px;
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes breadUp {
+  0% {
+    bottom: 35px;
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+  25% {
+    bottom: 35px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    bottom: 80px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  75% {
+    bottom: 35px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 35px;
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+}
+
+@-webkit-keyframes moveKnife {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(300deg);
+    transform: translateX(0) rotate(300deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(300deg);
+    transform: translateX(100%) rotate(300deg);
+  }
+}
+
+@keyframes moveKnife {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(300deg);
+    transform: translateX(0) rotate(300deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(300deg);
+    transform: translateX(100%) rotate(300deg);
+  }
+}
+
+@-webkit-keyframes showMayo {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showMayo {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes food-info {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes food-info {
+  0% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes showVegMayo {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  50% {
+    left: 65%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 65%;
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
+@keyframes showVegMayo {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);  
+  }
+  50% {
+    left: 65%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 65%;
+    -webkit-transform: translate(-100%);
+    transform: translate(-100%);
+  }
+}
+
+@-webkit-keyframes showHat {
+  0% {
+    -webkit-transform: translate(-250%, 0);
+    transform: translate(-250%, 0);
+  }
+  30% {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  60% {
+    -webkit-transform: translate(-50%, 40%);
+    transform: translate(-50%, 40%);
+  }
+  40% {
+    -webkit-transform: translate(-50%, 40%);
+    transform: translate(-50%, 40%);
+  }
+}
+
+@keyframes showHat {
+  0% {
+    -webkit-transform: translate(-250%, 0);
+    transform: translate(-250%, 0);
+  }
+  30% {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  60% {
+    -webkit-transform: translate(-50%, 95%);
+    transform: translate(-50%, 95%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 95%);
+    transform: translate(-50%, 95%);
+  }
+}
+
+@-webkit-keyframes showBtn {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes showBtn {
+  0% {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  50% {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+/* ****************************** 
+  animation ends here
+/* ****************************** */
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+}
